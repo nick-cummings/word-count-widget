@@ -8,6 +8,7 @@ A simple Express server that displays word counts from Notion pages. Perfect for
 - Support for multiple pages via query parameters
 - Customizable font size, color, and style
 - Built-in refresh button
+- **Configuration page** with live preview and one-click URL generation
 - Easy to deploy and embed
 
 ## Setup
@@ -58,6 +59,22 @@ https://www.notion.so/Your-Page-Title-{PAGE_ID}
 
 6. Visit [http://localhost:3000](http://localhost:3000)
 
+## Easy Configuration
+
+The easiest way to customize your widget is using the **configuration page**:
+
+1. Visit [http://localhost:3000/config](http://localhost:3000/config) (or `/config` on your deployed URL)
+2. Enter your Notion Page ID
+3. Adjust the styling:
+   - **Font Size**: Use the slider (12px - 120px)
+   - **Text Color**: Pick any color with the color picker
+   - **Font Family**: Choose from 9 font options
+4. See a **live preview** of your widget
+5. Click **"Copy URL for Notion"** to copy the generated URL
+6. Paste the URL in Notion using `/embed`
+
+This is the **recommended way** to configure your widget - no need to manually construct URLs with query parameters!
+
 ## Deploy to Render
 
 ### Quick Deploy
@@ -94,7 +111,9 @@ Each Notion page can have its own embed with a different `pageId` parameter.
 
 ## Customization
 
-You can customize the appearance using URL query parameters:
+**Recommended:** Use the [configuration page](#easy-configuration) at `/config` for easy visual customization.
+
+Alternatively, you can customize the appearance using URL query parameters:
 
 ### Available Parameters
 
