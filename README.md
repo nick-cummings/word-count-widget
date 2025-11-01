@@ -6,6 +6,8 @@ A simple Express server that displays word counts from Notion pages. Perfect for
 
 - Real-time word count from any Notion page
 - Support for multiple pages via query parameters
+- Customizable font size, color, and style
+- Built-in refresh button
 - Easy to deploy and embed
 
 ## Setup
@@ -89,6 +91,39 @@ Embed with the page ID in the URL:
 ```
 
 Each Notion page can have its own embed with a different `pageId` parameter.
+
+## Customization
+
+You can customize the appearance using URL query parameters:
+
+### Available Parameters
+
+- **`pageId`** - Notion page ID to fetch word count from
+- **`fontSize`** - Font size (default: `48px`)
+  - Examples: `24px`, `3rem`, `2em`
+- **`color`** - Text color (default: `#000000`)
+  - Examples: `#ff0000`, `rgb(255,0,0)`, `red`
+- **`fontFamily`** - Font family (default: `sans-serif`)
+  - Examples: `serif`, `monospace`, `Georgia`, `'Comic Sans MS'`
+
+### Example URLs
+
+**Large red text:**
+```
+https://your-app.onrender.com?pageId=abc123&fontSize=72px&color=red
+```
+
+**Small monospace font:**
+```
+https://your-app.onrender.com?pageId=abc123&fontSize=24px&fontFamily=monospace
+```
+
+**Custom color and serif font:**
+```
+https://your-app.onrender.com?pageId=abc123&color=%23336699&fontFamily=Georgia
+```
+
+Note: When using colors with `#`, encode it as `%23` in URLs (e.g., `#336699` becomes `%23336699`)
 
 ## How It Works
 
