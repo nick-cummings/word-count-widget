@@ -294,13 +294,11 @@ app.get("/", async (req, res) => {
                 <style>
                     body {
                         margin: 0;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
+                        padding: 10px;
                         font-family: ${fontFamily};
                     }
                     .word-count-container {
-                        display: flex;
+                        display: inline-flex;
                         align-items: center;
                     }
                     .word-count {
