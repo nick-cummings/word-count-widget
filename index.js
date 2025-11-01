@@ -13,6 +13,7 @@ app.get("/", async (req, res) => {
         if (PAGE_ID === "your-page-id-here") {
             return res.send(`<h1 style="font-family:sans-serif;color:orange">Error: NOTION_PAGE_ID not configured</h1><p>Please add your Notion page ID as a secret.</p>`);
         }
+        
         const blocks = await notion.blocks.children.list({ block_id: PAGE_ID });
         const text = blocks.results
             .map((b) => b.paragraph?.rich_text?.map((rt) => rt.plain_text).join(""))
