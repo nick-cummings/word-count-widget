@@ -294,17 +294,14 @@ app.get("/", async (req, res) => {
                 <style>
                     body {
                         margin: 0;
-                        padding: 20px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        min-height: 100vh;
                         font-family: ${fontFamily};
                     }
                     .word-count-container {
                         display: flex;
                         align-items: center;
-                        gap: 12px;
                     }
                     .word-count {
                         font-size: ${fontSize};
@@ -326,6 +323,7 @@ app.get("/", async (req, res) => {
                         justify-content: center;
                         transition: background-color 0.2s, transform 0.2s;
                         flex-shrink: 0;
+                        margin-left: 10px;
                     }
                     .refresh-btn:hover {
                         background-color: #333333;
