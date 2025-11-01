@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: word-count-widget
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NOTION_TOKEN
+        sync: false
+      - key: NOTION_PAGE_ID
+        sync: false
